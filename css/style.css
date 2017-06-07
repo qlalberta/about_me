@@ -1,3 +1,8 @@
+body {
+  font-size: 80%;
+  font-family: Courier New
+}
+
 .class {
   font-family: Arial;
   color: orange;

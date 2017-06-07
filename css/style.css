@@ -1,16 +1,19 @@
 body {
-  font-size: 80%;
-  font-family: Courier New
+  font-size: 90%;
+  font-family: Arial;
+  color: white;
+  background-color: black;
 }
 
-.class {
+.header1 {
+  font-size: 50%
   font-family: Arial;
-  color: orange;
-  padding: inherit;
+  color:#cccc00 ;
+  padding: 10px;
 }
-h1 {
-  color: violet !important
-}
-p1 {
-  font-family: Verdana;
+
+.header2 {
+  font-family: Arial;
+  color:#e6e6e6 ;
+  padding: 10px;
 }

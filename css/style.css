@@ -1,0 +1,11 @@
+.class {
+  font-family: Arial;
+  color: orange;
+  padding: inherit;
+}
+h1 {
+  color: violet !important
+}
+p1 {
+  font-family: Verdana;
+}

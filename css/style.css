@@ -7,10 +7,8 @@ body {
 }
 
 #header {
-  margin: 150px 10px 0px 400px;
+  margin: 120px 10px 0px 400px;
   padding:0px;
-  /*position: abs;*/
-  /*hight:100%;*/
   color: rgba(239, 240, 244, 0.72);
   font-family: 'Princess Sofia', cursive;
   font-size: 380%;
@@ -64,11 +62,7 @@ text-align: right;
   margin: 0px 10px 500px 400px;
   text-align: justify;
   display: inline;
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Coda', cursive;
   font-size: 120%;
   color: white;
-}
-
-table {
-  margin: 200px 5px 2px auto;
 }

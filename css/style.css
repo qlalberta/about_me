@@ -1,29 +1,28 @@
 
-body{
-  background: black url("../images/sunflower.jpg");
+body {
   margin: 5px auto;
-  text-align: center;
   width: auto;
+  background: black url("../images/sunflower.jpg");
+  text-align: center;
 }
 
 #header {
-  padding:0px;
-  position: abs;
-  hight:100%;
-  color: rgba(239, 240, 244, 0.72);
   margin: 150px 10px 0px 400px;
+  padding:0px;
+  /*position: abs;*/
+  /*hight:100%;*/
+  color: rgba(239, 240, 244, 0.72);
   font-family: 'Princess Sofia', cursive;
   font-size: 380%;
 }
 
-a {
+li a {
     color: yellow;
     text-decoration: none;
 }
 
-a:hover
-{
-     color:42f4b3;
+li a:hover {
+     color:rgb(205, 213, 223);
      text-decoration:none;
      cursor:pointer;
 }
@@ -32,22 +31,35 @@ h1 {
   height: 100px;
 }
 
-ul
-{
-list-style-type: none;
-padding: 0;
+#homepage {
 margin: 50px 50px 10px 10px;
+padding: 0;
 text-align: right;
 }
 
-li {
-  display: inline;
+#homepage li {
+  margin: auto;
   padding: 5px;
+  display: inline;
   font-family: 'Poiret One', cursive;
   font-size: 100%;
-  margin: auto;
 }
 
+.experience {
+  margin auto;
+  padding: 0;
+  text-alight: right;
+}
+
+.experience li {
+  margin: 10px 200px 0px 650px;
+  padding: 2px;
+  display: block;
+  font-family: 'Poiret One', cursive;
+  font-size: 100%;
+  color: yellow;
+  text-align: center;
+}
 .paragraph {
   margin: 0px 10px 500px 400px;
   text-align: justify;

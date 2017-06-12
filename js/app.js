@@ -91,10 +91,13 @@ if (answer5 === 'no' || answer5 === 'n') {
   alert('Oops. Wrong. You point(s) is ' + point + '. Please answer the next question.');
 }
 //The sixth question
-// can remind the user the remaining and send to console
 var answer6 = prompt('Can you guess my favorite number, between 0 to 10? You have 4 chances in total. Good luck!');
 var remainingAttempts = 4;
-console.log('My favorite number ' + answer6);
+// var numberCheck = false;
+while (isNaN(answer6)) {
+  answer6 = prompt('Please give me a number between 0 to 10.');
+  console.log('My favorite number: ' + answer6);
+}
 if (answer6 == 7) {
   point++;
   count1++;
@@ -161,7 +164,7 @@ for (var j = 0; j < state.length; j++) {
 
 if (!found) {
   for (var k = 0; k < 5; k++) {
-    answer7 = prompt('Wrong. Keep guessing. Which state? You have ' + remainingAttempts + 'remaining attempts').toUpperCase();
+    answer7 = prompt('Wrong. Keep guessing. Which state? You have ' + remainingAttempts + ' remaining attempts').toUpperCase();
     remainingAttempts--;
     console.log('answer7' + answer7 + ';remainingAttempts:' + remainingAttempts);
     for (j = 0; j < state.length; j++) {

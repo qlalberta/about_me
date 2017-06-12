@@ -112,6 +112,7 @@ function fifthQuestion() {
 // function sixthQuestion() {
 var answer6 = prompt('Can you guess my favorite number, between 0 to 10? You have 4 chances in total. Good luck!');
 var remainingAttempts = 4;
+var i = 0;
 // var numberCheck = false;
 while (isNaN(answer6)) {
   answer6 = prompt('Please give me a number between 0 to 10.');
@@ -126,7 +127,7 @@ function sixthQuestion() {
     console.log('point: ' + point + ';count1: ' + count1 + ';remainingAttempts: ' + remainingAttempts);
     alert('Correct. Impressive! You are good at this game. You point(s) is ' + point + '.');
   } else {
-    for (var i = 0; i < 4; i++) {
+    for (i = 0; i < 4; i++) {
       if (answer6 < 7 && answer6 >= 0) {
         point--;
         remainingAttempts--;
@@ -152,20 +153,20 @@ function sixthQuestion() {
       }
     }
   }
-  if (i == 3 && answer7 != 7) {
-    point--;
-    remainingAttempts--;
-    console.log('answer6: ' + answer6 + ';point: ' + point + ';remainingAttempts: ' + remainingAttempts);
-    console.log(i);
-    alert('You used up all your chances. Sorry. Good luck with the last question. You point(s) is ' + point + '. Continue to the last question.');
-  }
-  if (i == 3 && answer7 == 7) {
-    point++;
-    remainingAttempts--;
-    console.log('answer6: ' + answer6 + ';point: ' + point + ';remainingAttempts: ' + remainingAttempts);
-    console.log(i);
-    alert('Correct! You got it!! You point(s) is ' + point + '. Continue to the last question.');
-  }
+}
+if (i == 3 && answer7 != 7) {
+  point--;
+  remainingAttempts--;
+  console.log('answer6: ' + answer6 + ';point: ' + point + ';remainingAttempts: ' + remainingAttempts);
+  console.log(i);
+  alert('You used up all your chances. Sorry. Good luck with the last question. You point(s) is ' + point + '. Continue to the last question.');
+}
+if (i == 3 && answer7 == 7) {
+  point++;
+  remainingAttempts--;
+  console.log('answer6: ' + answer6 + ';point: ' + point + ';remainingAttempts: ' + remainingAttempts);
+  console.log(i);
+  alert('Correct! You got it!! You point(s) is ' + point + '. Continue to the last question.');
 }
 // The seventh question
 // seventhQuestion();
@@ -174,27 +175,31 @@ remainingAttempts = 6;
 var state = ['NY', 'MA', 'LA', 'NV', 'TX', 'CA', 'AZ', 'CT', 'FL'];
 var answer7 = prompt('Can you guess a state that I visited before, abbrevation names only?').toUpperCase();
 var found = false;
+var j = 0;
+var k = 0;
+var m = 0;
+
 console.log('State I visited: ' + answer7);
+for (j = 0; j < state.length; j++) {
+  if (answer7 == state[j]) {
+    point++;
+    count1++;
+    remainingAttempts--;
+    console.log('answer7: ' + answer7 + ';point: ' + point + 'count1: ' + count1 + ';remainingAttempts: ' + remainingAttempts);
+    alert('Correct! You point(s) is ' + point + '.Here are all the states I\'ve visted: ' + state.join() + '. Thanks for playing the game, ' + userName + '! You got ' + count1 + 'out of 7 questions correct! I hope you enjoyed it.');
+    found = true;
+  }
+}
 seventhQuestion();
 function seventhQuestion() {
-  for (var j = 0; j < state.length; j++) {
-    if (answer7 == state[j]) {
-      point++;
-      count1++;
-      remainingAttempts--;
-      console.log('answer7: ' + answer7 + ';point: ' + point + 'count1: ' + count1 + ';remainingAttempts: ' + remainingAttempts);
-      alert('Correct! You point(s) is ' + point + '.Here are all the states I\'ve visted: ' + state.join() + '. Thanks for playing the game, ' + userName + '! You got ' + count1 + 'out of 7 questions correct! I hope you enjoyed it.');
-      found = true;
-    }
-  }
 
   if (!found) {
-    for (var k = 0; k < 5; k++) {
+    for (k = 0; k < 5; k++) {
       answer7 = prompt('Wrong. Keep guessing. Which state? You have ' + remainingAttempts + ' remaining attempts').toUpperCase();
       remainingAttempts--;
       console.log('answer7' + answer7 + ';remainingAttempts:' + remainingAttempts);
-      for (j = 0; j < state.length; j++) {
-        if (answer7 == state[j]) {
+      for (m = 0; m < state.length; m++) {
+        if (answer7 == state[m]) {
           count1++;
           point++;
           console.log('answer6: ' + answer6 + ';point: ' + point + ';count1: ' + count1 + ';remainingAttempts: ' + remainingAttempts);

@@ -149,14 +149,6 @@ if (answer6 == 7) {
     alert('You used up all your chances. Sorry. Good luck with the last question. You point(s) is ' + point + '. Continue to the last question.');
   }
 }
-//
-// if (i == 3 && answer6 == 7) {
-//   point++;
-//   remainingAttempts1--;
-//   console.log('answer6: ' + answer6 + ';point: ' + point + ';remainingAttempts: ' + remainingAttempts1);
-//   console.log(i);
-//   alert('Correct! You got it!! You point(s) is ' + point + '. Continue to the last question.');
-// }
 
 // The seventh question
 var remainingAttempts2 = 5;
